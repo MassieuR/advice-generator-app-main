@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --universal-margin: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background: var(--dark-blue);
+    width: 100vw;
+    height: 100vh;
+}
+
+.inactive {
+    display: none;
+}
+
+#advice-container {
+    width: 90vw;
+    height: 35vh;
+    margin: auto;
+    border-radius: 10px;
+    background: var(--dark-grayish-blue);
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--neon-green);
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin: var(--universal-margin) 0;
+}
+
+p {
+    display: block;
+    width: 80%;
+    height: 40%;
+    margin: var(--universal-margin) auto;
+    font-size: 24px;
+    color: var(--light-cyan);
+    text-align: center;
+    overflow: scroll;
+}
+
+.pattern-mobile {
+    margin: var(--universal-margin) auto;
+}
+
+#logo-container {
+    position: relative;
+    top: 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neon-green);
+    height: calc(20px * 3);
+    width: calc(20px * 3);
+    border-radius: 100%;
+}
+
+#logo-container:active {
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+#dice {
+    width: 23px;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --universal-margin: 20px;
+    }
+
+    #advice-container {
+        width: 50vw;
+        height: 35vh;
+        margin: auto;
+        border-radius: 10px;
+        background: var(--dark-grayish-blue);
+        text-align: center;
+        padding: 25px 0;
+    }
+
+    #advice {
+        overflow: hidden;
+    }
+
+    .pattern-mobile {
+        display: none;
+    }
+
+    .pattern-desktop {
+        display: block;
+        max-height: 10%;
+        margin: var(--universal-margin) auto;
+    }
+
+    #logo-container {
+        position: relative;
+        top: 17%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--neon-green);
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    #dice {
+        width: 20px;
+    }
+}
